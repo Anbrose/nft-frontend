@@ -15,6 +15,7 @@ import { Users as UsersIcon } from '../icons/users';
 import { XCircle as XCircleIcon } from '../icons/x-circle';
 import { Logo } from './logo';
 import { NavItem } from './nav-item';
+import { MdLeaderboard } from "react-icons/md";
 
 const items = [
   {
@@ -56,6 +57,11 @@ const items = [
     href: '/404',
     icon: (<XCircleIcon fontSize="small" />),
     title: 'Error'
+  },
+  {
+    href: '/nftdashboard',
+    icon: (<MdLeaderboard fontSize="small" />),
+    title: 'NFTDashboard'
   }
 ];
 
