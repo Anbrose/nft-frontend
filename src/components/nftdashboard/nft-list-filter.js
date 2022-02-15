@@ -9,13 +9,15 @@ import {
 } from '@mui/material';
 import { Search as SearchIcon } from '../../icons/search';
 
-export const NftListFilter = (props) => (
-  <Box {...props}>
+export const NftListFilter = ({filterText, setFilterText}) => (
+  <Box >
     <Box sx={{ mt: 3 }}>
       <Card>
         <CardContent>
           <Box sx={{ maxWidth: 500 }}>
             <TextField
+              value={filterText}
+              onChange={setFilterText}
               fullWidth
               InputProps={{
                 startAdornment: (

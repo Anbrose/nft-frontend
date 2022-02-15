@@ -37,7 +37,7 @@ export const NftListHistorychart = () => {
       }
     },
     scales:{
-      x: 
+      x:
         {
           ticks: {
             autoSkip: true,
@@ -69,8 +69,6 @@ export const NftListHistorychart = () => {
         <Grid item>
           <Line
             data={NFTLineChartData}
-            height={600}
-            width={800}
             options={NFTLineChartOption}/>
         </Grid>
       </CardContent>

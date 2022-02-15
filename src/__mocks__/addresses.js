@@ -1,0 +1,16 @@
+export const addresses = [
+  "0xb47e3cd837ddf8e4c57f05d70ab865de6e193bbb",
+  "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d",
+  "0x959e104e1a4db6317fa58f8295f586e1a978c297",
+  "0x60e4d786628fea6478f785a6d7e704777c86a7c6",
+  "0x50f5474724e0ee42d9a4e711ccfb275809fd6d4a",
+  "0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b",
+  "0xd07dc4262bcdbf85190c01c996b4c06a461d2430",
+  "0xed5af388653567af2f388e6224dc7c4b3241c544",
+  "0xfeb52cbf71b9adac957c6f948a6cf9980ac8c907",
+  "0x06012c8cf97bead5deae237070f9587f8e7a266d"
+]
+
+// export const addresses = [
+//   "0xb47e3cd837ddf8e4c57f05d70ab865de6e193bbb",
+// ]
