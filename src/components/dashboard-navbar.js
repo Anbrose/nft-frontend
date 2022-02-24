@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
+import { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
-import { AppBar, Avatar, Badge, Box, IconButton, Toolbar, Tooltip } from '@mui/material';
+import { AppBar, Avatar, Badge, Box, IconButton, Button, Toolbar, Tooltip } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import { Bell as BellIcon } from '../icons/bell';
@@ -14,6 +15,19 @@ const DashboardNavbarRoot = styled(AppBar)(({ theme }) => ({
 
 export const DashboardNavbar = (props) => {
   const { onSidebarOpen, ...other } = props;
+  const [LocalWeb3Status, setLocalWeb3Status] = useState(false)
+
+  useEffect(() => {
+    checkWeb3Condition()
+  }, [])
+
+  const checkWeb3Condition = async () => {
+     if (window.ethereum || window.web3){
+       setLocalWeb3Status(LocalWeb3Status => true)
+       const accounts = await window.ethereum.request({method: 'eth_requestAccounts'})
+       console.log(accounts[0])
+     }
+  }
 
   return (
     <>
@@ -52,6 +66,10 @@ export const DashboardNavbar = (props) => {
             </IconButton>
           </Tooltip>
           <Box sx={{ flexGrow: 1 }} />
+          <Button
+            sc={{ bgcolor: LocalWeb3Status? "green" : "red" }}>
+              {LocalWeb3Status ? "Metamask Connected" : "Metamask Disconnected"}
+          </Button>
           <Tooltip title="Contacts">
             <IconButton sx={{ ml: 1 }}>
               <UsersIcon fontSize="small" />
