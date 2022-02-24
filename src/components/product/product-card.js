@@ -14,6 +14,11 @@ export const ProductCard = ({ product, NFTid, ...rest }) => {
       return
     }
 
+    if (NFTid == ""){
+      alert("Please wait for init img...")
+      return
+    }
+
     const contractAddress = "0xab4b695B59Ab63EcDc1eDba86230a289CCbC97aF";
 
     const accounts = await window.ethereum.request({method: 'eth_requestAccounts'})
